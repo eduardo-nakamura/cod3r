@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node --openssl-legacy-provider node_modules/webpack/bin/webpack.js",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+
+    "dev": "node --openssl-legacy-provider node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "webpack-dev-server":"3.1.4",
     "file-loader":"1.1.11",
     "cross-env": "5.1.5",
     "optimize-css-assets-webpack-plugin":"4.0.1",
