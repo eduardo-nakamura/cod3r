@@ -9,3 +9,9 @@ aside.logo img {
     padding: 0px 15px;
     width: 90%;
 }
+
+@media(max-width: 576px) {
+    aside.logo img {        
+        max-width:350px;
+    }
+}
