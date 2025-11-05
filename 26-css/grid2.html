@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid 1</title>
+    <style>
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background-color: #fff;
+        }
+
+        .grid-container {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            /* Nomeando Colunas */
+            grid-template-columns:
+                [inicio] 1fr [metade-1 meio-1] 1fr [metade-2 meio-2] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .d1 {
+            grid-column-start: metade-1;
+            grid-column-end: fim;
+            grid-row: 1;
+
+        }
+
+        .d4 {
+            background-color: red;
+            grid-column: meio-1 / fim;
+            grid-area: 2 / meio-1 / span 3 / fim;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="grid-container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+        <div class="d6">6</div>
+        <div class="d7">7</div>
+        <div class="d8">8</div>
+        <div class="d9">9</div>
+
+    </section>
+
+
+</body>
+
+</html>
